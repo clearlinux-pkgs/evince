@@ -1,0 +1,7 @@
+Configure miss: SPECTRE
+Configure miss: tiff.h usability
+Configure miss: tiff.h presence
+Configure miss: tiff.h
+Configure miss: DJVU
+Configure miss: kpse_init_prog in -lkpathsea
+Configure miss: GXPS
