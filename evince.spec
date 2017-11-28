@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.26.0
-Release  : 1
+Release  : 2
 URL      : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Summary  : GNOME document viewer view library
@@ -45,6 +45,7 @@ BuildRequires : pkgconfig(gtk+-unix-print-3.0)
 BuildRequires : pkgconfig(libarchive)
 BuildRequires : pkgconfig(libnautilus-extension)
 BuildRequires : pkgconfig(libsecret-1)
+BuildRequires : pkgconfig(libspectre)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(poppler-glib)
 BuildRequires : sed
@@ -128,7 +129,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1510187035
+export SOURCE_DATE_EPOCH=1511909279
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -140,7 +141,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1510187035
+export SOURCE_DATE_EPOCH=1511909279
 rm -rf %{buildroot}
 %make_install
 %find_lang evince
@@ -149,6 +150,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/lib64/evince/4/backends/comicsdocument.evince-backend
 /usr/lib64/evince/4/backends/pdfdocument.evince-backend
+/usr/lib64/evince/4/backends/psdocument.evince-backend
 
 %files bin
 %defattr(-,root,root,-)
@@ -166,6 +168,7 @@ rm -rf %{buildroot}
 /usr/share/GConf/gsettings/evince.convert
 /usr/share/appdata/evince-comicsdocument.metainfo.xml
 /usr/share/appdata/evince-pdfdocument.metainfo.xml
+/usr/share/appdata/evince-psdocument.metainfo.xml
 /usr/share/appdata/evince.appdata.xml
 /usr/share/applications/evince-previewer.desktop
 /usr/share/applications/evince.desktop
@@ -3014,6 +3017,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/lib64/evince/4/backends/libcomicsdocument.so
 /usr/lib64/evince/4/backends/libpdfdocument.so
+/usr/lib64/evince/4/backends/libpsdocument.so
 /usr/lib64/libevdocument3.so.4
 /usr/lib64/libevdocument3.so.4.0.0
 /usr/lib64/libevview3.so.3
