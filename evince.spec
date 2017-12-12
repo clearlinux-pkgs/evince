@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.26.0
-Release  : 2
+Release  : 4
 URL      : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Summary  : GNOME document viewer view library
@@ -129,9 +129,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1511909279
+export SOURCE_DATE_EPOCH=1513095496
 %configure --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
@@ -141,7 +141,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1511909279
+export SOURCE_DATE_EPOCH=1513095496
 rm -rf %{buildroot}
 %make_install
 %find_lang evince
