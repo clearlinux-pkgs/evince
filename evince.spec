@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.26.0
-Release  : 6
+Release  : 7
 URL      : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Summary  : GNOME document viewer view library
