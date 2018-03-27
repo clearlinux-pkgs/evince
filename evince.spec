@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.26.0
-Release  : 7
+Release  : 8
 URL      : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/GNOME/sources/evince/3.26/evince-3.26.0.tar.xz
 Summary  : GNOME document viewer view library
@@ -129,11 +129,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517681664
-export CFLAGS="$CFLAGS -fstack-protector-strong "
-export FCFLAGS="$CFLAGS -fstack-protector-strong "
-export FFLAGS="$CFLAGS -fstack-protector-strong "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
+export SOURCE_DATE_EPOCH=1522183649
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -145,7 +145,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1517681664
+export SOURCE_DATE_EPOCH=1522183649
 rm -rf %{buildroot}
 %make_install
 %find_lang evince
