@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.28.0
-Release  : 9
+Release  : 10
 URL      : https://download.gnome.org/sources/evince/3.28/evince-3.28.0.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.28/evince-3.28.0.tar.xz
 Summary  : GNOME document viewer backend library
