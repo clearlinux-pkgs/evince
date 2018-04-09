@@ -557,6 +557,7 @@ libevview3.so.3:ev_view_accessible_set_focused_element
 libevview3.so.3:ev_view_accessible_set_model
 libevview3.so.3:ev_view_accessible_set_page_range
 libevview3.so.3:ev_view_accessible_update_element_state
+libevview3.so.3:ev_view_add_text_markup_annotation_for_selected_text
 libevview3.so.3:ev_view_autoscroll_start
 libevview3.so.3:ev_view_autoscroll_stop
 libevview3.so.3:ev_view_begin_add_annotation
@@ -579,6 +580,7 @@ libevview3.so.3:ev_view_focus_annotation
 libevview3.so.3:ev_view_get_allow_links_change_zoom
 libevview3.so.3:ev_view_get_has_selection
 libevview3.so.3:ev_view_get_page_extents
+libevview3.so.3:ev_view_get_selected_text
 libevview3.so.3:ev_view_get_type
 libevview3.so.3:ev_view_handle_link
 libevview3.so.3:ev_view_hide_cursor
