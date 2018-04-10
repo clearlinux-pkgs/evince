@@ -1,41 +1,4 @@
-commit 1261364090e4a4cb24b6b02e60b88898aeaa07de
-Author:     Germán Poo-Caamaño <gpoo@gnome.org>
-AuthorDate: 2018-04-09
-Commit:     Germán Poo-Caamaño <gpoo@gnome.org>
-CommitDate: 2018-04-09
-
-    Release 3.28.1
-
-M	NEWS
-M	configure.ac
-
-commit 8dbd0c6eaf83f16de974750df24e6c81620a6438
-Author:     Hannes Ovrén <kigurai@gmail.com>
-AuthorDate: 2013-02-25
-Commit:     Germán Poo-Caamaño <gpoo@gnome.org>
-CommitDate: 2018-04-09
-
-    libview: Make sync-source signal introspectable
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=694687
-
-M	libview/ev-view.c
-
-commit 5c9acd557b9c3630839561e62834362fb860d502
-Author:     Germán Poo-Caamaño <gpoo@gnome.org>
-AuthorDate: 2017-10-05
-Commit:     Germán Poo-Caamaño <gpoo@gnome.org>
-CommitDate: 2018-04-09
-
-    libview: Document is-loading property
-
-    The property replaced the old EvLoadingWindow.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=693864
-
-M	libview/ev-view.c
-
-commit caef25d61c3fc987c23518ca60a46dbfb0a2d294
+commit 348905f3fb36bf09942a6ca426fe5b80176b8b91
 Author:     Anders Jonsson <anders.jonsson@norsjovallen.se>
 AuthorDate: 2018-04-03
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -45,331 +8,17 @@ CommitDate: 2018-04-03
 
 M	help/sv/sv.po
 
-commit fc9370419720915953c5e97fe44c561ea78bb6fa
-Author:     Jason Crain <jcrain@src.gnome.org>
-AuthorDate: 2018-04-01
-Commit:     Jason Crain <jcrain@src.gnome.org>
-CommitDate: 2018-04-01
-
-    shell: Use display and edit name for filename
-
-    Files on Google Drive have randomly generated URIs. Instead of
-    using the
-    URI, show the display-name in the UI for the password view and window
-    title, and use the edit-name when saving and printing.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=756354
-
-M	shell/ev-password-view.c
-M	shell/ev-password-view.h
-M	shell/ev-window-title.c
-M	shell/ev-window-title.h
-M	shell/ev-window.c
-
-commit 4416eb17ad90a12243d1b876c501d2d5e8bf4aa7
-Author:     José Aliste <jose.aliste@gmail.com>
-AuthorDate: 2018-03-30
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-30
-
-    libdocument: Use a cmp function to compare size of area in ev_mapping
-    list_get
-
-    This is a fixup commit to previous commit by Fabian Franzen
-    based on work of Bastien Nocera. We try to avoid multiplications
-    by comparing width and lengths of the areas first.
-
-M	libdocument/ev-mapping-list.c
-
-commit b6390b35b30ed273885ce6ead6f32ef496dce0ac
-Author:     José Aliste <jose.aliste@gmail.com>
-AuthorDate: 2018-03-28
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-28
-
-    shell: Use selection to populate find bar if available.
-
-    When a selection is made, if user clicks on the Search icon or hits
-    Ctrl+F, the search bar will be shown with the selection copied to the
-    search bar entry. This immitates what Gedit does when the Find action
-    is activated and there is a selection
-
-    Based on a patch by William Hawkins <hawkinsw@borlaugic.com>
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=794538
-
-M	shell/ev-window.c
-
-commit 8bca7b22961d3e6119eeb3e44190cb365a46bdc2
-Author:     Will Hawkins <hakinsw@borlaugic.com>
-AuthorDate: 2018-03-28
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-28
-
-    libview: Add API to get the selected text
-
-    To add search for selected text, we need to pass the
-    selected text from the EvView to the shell. Thus
-    we add a method to get the selected text from the View.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=794538
-
-M	libview/ev-view.c
-M	libview/ev-view.h
-
-commit fc13bf507041dadab2b1210379bd665510b07f43
-Author:     José Aliste <jose.aliste@gmail.com>
-AuthorDate: 2018-03-28
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-28
-
-    shell: Use ev_window_set_action_enabled more
-
-    There were many uses of the same pattern that is already
-    coded in ev_window_set_action_enabled, so use it in all cases
-    all you need to do is enable/disable the action.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=794749
-
-M	shell/ev-window.c
-
-commit 0797b9daf9f65ecd880fd7e40d7e03db74656ce1
-Author:     José Aliste <jose.aliste@gmail.com>
-AuthorDate: 2018-03-28
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-28
-
-    shell: there is no need for view_menu_text_selection_popup
-
-    We introduced it while fixing bug 763493, but this function
-    is identical to ev_window_set_enabled so we don't need it.
-
-    See bug 763493
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=763943
-
-M	shell/ev-window.c
-
-commit 7b568ed546625004d5d880f3fe39ac6018802800
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-19
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-19
-
-    Remove unused image evince-toolbar-editor.png from localized user docs
-
-D	help/de/figures/evince-toolbar-editor.png
-D	help/el/figures/evince-toolbar-editor.png
-D	help/fr/figures/evince-toolbar-editor.png
-D	help/ja/figures/evince-toolbar-editor.png
-
-commit 9d06f936fd18e1cfaf9c614769c235c71cd8a497
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-19
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-19
-
-    Remove unused image evince-toolbar-default.png from localized
-    user docs
-
-D	help/de/figures/evince-toolbar-default.png
-D	help/el/figures/evince-toolbar-default.png
-D	help/fr/figures/evince-toolbar-default.png
-D	help/ja/figures/evince-toolbar-default.png
-
-commit f50c4838034da1ceb32c6cbec2dfc92105c1cf81
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-19
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-19
-
-    Remove unused image print-2sided.png from localized user docs
-
-D	help/el/figures/print-2sided.png
-
-commit 8e21db2a89a7a2da3605bf406dfa17d417bfbc3b
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-19
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-19
-
-    Remove unused image annotations-navigate.png from localized user docs
-
-D	help/de/figures/annotations-navigate.png
-D	help/fr/figures/annotations-navigate.png
-D	help/hu/figures/annotations-navigate.png
-D	help/ja/figures/annotations-navigate.png
-D	help/ko/figures/annotations-navigate.png
-D	help/pt_BR/figures/annotations-navigate.png
-
-commit 88077ddf14731a210869cf03477dd950f1c91ee9
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-19
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-19
-
-    Remove unused image evince_start_window.png from localized user docs
-
-D	help/bg/figures/evince_start_window.png
-D	help/ca/figures/evince_start_window.png
-D	help/cs/figures/evince_start_window.png
-D	help/es/figures/evince_start_window.png
-D	help/eu/figures/evince_start_window.png
-D	help/fi/figures/evince_start_window.png
-D	help/it/figures/evince_start_window.png
-D	help/nl/figures/evince_start_window.png
-D	help/sv/figures/evince_start_window.png
-D	help/uk/figures/evince_start_window.png
-
-commit 1dee3afb64a3500167d9dd71927258ce305ed28d
-Author:     Andre Klapper <a9016009@gmx.de>
-AuthorDate: 2018-03-17
-Commit:     Andre Klapper <a9016009@gmx.de>
-CommitDate: 2018-03-17
-
-    Fix broken markup in Dutch translation
-
-M	help/nl/nl.po
-
-commit a75d54e77c7df8d2e3dd573507868fbab445f146
-Author:     Balázs Úr <balazs@urbalazs.hu>
-AuthorDate: 2018-03-15
-Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
-CommitDate: 2018-03-15
-
-    Update Hungarian translation
-
-M	po/hu.po
-
-commit b705652ca40ba10323c8c4a24d7c92a029a7627d
-Author:     Bastien Nocera <hadess@hadess.net>
-AuthorDate: 2018-03-14
-Commit:     Bastien Nocera <hadess@hadess.net>
-CommitDate: 2018-03-15
-
-    unarr: Add instructions on how to update LZMA SDK
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=794327
-
-A	cut-n-paste/unarr/lzmasdk/README.lzmasdk
-
-commit fe3c4272eef93285d055ad85d79a892c7e084cac
-Author:     Bastien Nocera <hadess@hadess.net>
-AuthorDate: 2018-03-14
-Commit:     Bastien Nocera <hadess@hadess.net>
-CommitDate: 2018-03-15
-
-    unarr: Update LZMA SDK
-
-    Using lzma1803.7z from:
-    https://sourceforge.net/projects/sevenzip/files/LZMA%20SDK/
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=794327
-
-M	cut-n-paste/unarr/lzmasdk/CpuArch.h
-
-commit 2e626663c1b27326de09e03ea0d28840f14d095b
-Author:     Jose Aliste <jaliste@src.gnome.org>
-AuthorDate: 2018-03-12
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-15
-
-    Cherry pick Release 3.28 commit to master branch
-
-    Rocky mistake of me I forgot to push the commit releasing 3.28 to
-    the master branch. This commit fixes this.
-
-M	NEWS
-M	configure.ac
-
-commit 4dc7d69ee83fe9aac937db863cd17389d23a6e6b
-Author:     José Aliste <jose.aliste@gmail.com>
-AuthorDate: 2018-03-15
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-15
-
-    libview: Fix Since docstring in new API
-
-    BY mistake we put Since:3.28 instead of 3.30 in the
-    new method add_markup_annotaiton_from_selection
-
-M	libview/ev-view.c
-
-commit fc0d21167185b34955f4996b35b0c479e0d482f3
-Author:     Nelson Benítez León <nbenitezl+gnome@gmail.com>
-AuthorDate: 2017-12-08
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-15
-
-    Allow adding Highlight annotations from text selection
-
-    As this is a natural, intuitive way to add text markup
-    annotations to a document.
-
-    The "Highlight Selected Text" action
-    in the context menu
-    will show if there is a selection. When
-    the selection spreads over several pages,
-    one annotation per page will be added accordingly
-    to fulfill the user expectation of all selected text
-    to be annotated.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=763943
-
-M	libview/ev-view.c
-M	libview/ev-view.h
-M	shell/ev-window.c
-M	shell/evince-menus.ui
-
-commit 838fde1acf8e8c288ebe110ea67020277a10a7f8
-Author:     Nelson Benítez León <nbenitezl+gnome@gmail.com>
-AuthorDate: 2017-12-09
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-15
-
-    Fix add_annotation() to update area based on bounding box
-
-    for Text Markup annotations, same way this is done if using
-    save_annotation().
-
-    When pdf_document_annotations_save_annotation() saves a Text Markup
-    annotation it will, prior to saving, update the area of annotation
-    to be based on its bounding box. But this was not being done if we
-    just used pdf_document_annotations_add_annotation() (because we
-    currently add annotations via a DnD operation that involves both
-    an initial add_annotation() plus subsequent save_annotation() calls
-    on motion_notify).
-
-    So this fix is needed to be able to correctly create a Text Markup
-    annotation by a single call to
-    pdf_document_annotations_add_annotation()
-
-    Part of https://bugzilla.gnome.org/show_bug.cgi?id=763943
-
-M	backend/pdf/ev-poppler.cc
-M	libview/ev-view.c
-
-commit b5b72c8d19c60712ef9422f4e14a8183bf341dd7
+commit 3864b8594223d655cd69cec20ccba1e8a5f53eec
 Author:     Daniel Șerbănescu <daniel@serbanescu.dk>
-AuthorDate: 2018-03-13
+AuthorDate: 2018-04-03
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
-CommitDate: 2018-03-13
+CommitDate: 2018-04-03
 
     Update Romanian translation
 
 M	po/ro.po
 
-commit 6311596dc777bdb19955e62a26f4f38ace33c874
-Author:     Justin van Steijn <jvs@fsfe.org>
-AuthorDate: 2018-03-13
-Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
-CommitDate: 2018-03-13
-
-    Update Dutch translation
-
-M	help/nl/nl.po
-
-commit 76286242bc9403e2c10141676428fc9fb73749da
+commit 92d042c461a30702082019126a3e2bce57aac1ef
 Author:     Stas Solovey <whats_up@tut.by>
 AuthorDate: 2018-03-13
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -377,21 +26,20 @@ CommitDate: 2018-03-13
 
     Update Russian translation
 
-    (cherry picked from commit 92d042c461a30702082019126a3e2bce57aac1ef)
-
 M	po/ru.po
 
-commit 8aa9eb3a5d1de1ac95f42b641b36cc42725ca4f2
-Author:     Balázs Úr <balazs@urbalazs.hu>
+commit db31945d903a747e258eede6b9d2282167fb4e39
+Author:     Jose Aliste <jaliste@src.gnome.org>
 AuthorDate: 2018-03-12
-Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
+Commit:     Jose Aliste <jaliste@src.gnome.org>
 CommitDate: 2018-03-12
 
-    Update Hungarian translation
+    Release 3.28
 
-M	po/hu.po
+M	NEWS
+M	configure.ac
 
-commit 6f76840f47bc7043941ddce7c330bd4fa80040d0
+commit f5127bd6adc06f09cde88c39c38c9d4fa1b064cd
 Author:     Anders Jonsson <anders.jonsson@norsjovallen.se>
 AuthorDate: 2018-03-11
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -399,11 +47,9 @@ CommitDate: 2018-03-11
 
     Update Swedish translation
 
-    (cherry picked from commit f5127bd6adc06f09cde88c39c38c9d4fa1b064cd)
-
 M	help/sv/sv.po
 
-commit 59358e6825f409719878244119cb6c3bbf34e612
+commit e2f36f26655cd623ec5593e6108f774761875a29
 Author:     Милош Поповић <gpopac@gmail.com>
 AuthorDate: 2018-03-10
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -411,11 +57,9 @@ CommitDate: 2018-03-10
 
     Update Serbian Latin translation
 
-    (cherry picked from commit e2f36f26655cd623ec5593e6108f774761875a29)
-
 M	po/sr@latin.po
 
-commit 978038cdcff1fc14cf08fc2864029f77304e76d5
+commit 286bb354fb9de3e25a32f69a62ff5739aeb70b39
 Author:     gogo <trebelnik2@gmail.com>
 AuthorDate: 2018-03-07
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -423,11 +67,19 @@ CommitDate: 2018-03-07
 
     Update Croatian translation
 
-    (cherry picked from commit 286bb354fb9de3e25a32f69a62ff5739aeb70b39)
-
 M	po/hr.po
 
-commit c42db8fe0303c8820b80210ee834a7604adaf26f
+commit bb12a38ffa708243654eeedd93a5f6e83c7f2184
+Author:     Aman Alam <alam.yellow@gmail.com>
+AuthorDate: 2018-03-07
+Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
+CommitDate: 2018-03-07
+
+    Update Punjabi translation
+
+M	po/pa.po
+
+commit ef44fef4bf7a68803046754f0e7eb2d19fab7fd8
 Author:     Gianvito Cavasoli <gianvito@gmx.it>
 AuthorDate: 2018-03-07
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
@@ -435,26 +87,10 @@ CommitDate: 2018-03-07
 
     Update Italian translation
 
-    (cherry picked from commit ef44fef4bf7a68803046754f0e7eb2d19fab7fd8)
-
 M	po/it.po
 
-commit eaef622a47723e9eaaa95bfa1dc6f784715c73ce
-Author:     Jonas Hahnfeld <hahnjo@hahnjo.de>
-AuthorDate: 2017-08-17
-Commit:     José Aliste <jose.aliste@gmail.com>
-CommitDate: 2018-03-06
-
-    Add shortcuts for fullscreen and presentation mode
-
-    This makes it easier for the users fo find the shortcuts.
-
-    https://bugzilla.gnome.org/show_bug.cgi?id=786431
-
-M	shell/help-overlay.ui
-
-commit aaf83e8ffbb4d92e2d89df2ad70b5dfb61995a90
-Author:     Efstathios Iosifidis <eiosifidis@gnome.org>
+commit cbbc8d629a34a47b16e2a13c103a6303763022bb
+Author:     Tom Tryfonidis <tomtryf@gnome.org>
 AuthorDate: 2018-03-06
 Commit:     GNOME Translation Robot <gnome-sysadmin@gnome.org>
 CommitDate: 2018-03-06
