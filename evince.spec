@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.28.2
-Release  : 14
+Release  : 15
 URL      : https://download.gnome.org/sources/evince/3.28/evince-3.28.2.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.28/evince-3.28.2.tar.xz
 Summary  : GNOME document viewer view library
