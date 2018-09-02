@@ -1,0 +1,4 @@
+3.28.3
+gobject-introspection-dev
+pkgconfig(adwaita-icon-theme)
+tiff-dev
