@@ -1,4 +1,39 @@
 ================
+Evince    3.30.1
+================
+
+Printing:
+ * Fix messages to show printed file name when it contains '&' in the name (#776, Nelson Benítez León)
+
+libdocument:
+ * Fix handling of mime-type aiases (#972, Bastien Nocera)
+ * Fix regression, open gzipped documents (#988, Christian Persch)
+
+Backends:
+ * comics: Use official IANA type for .cbr (#972, Frank Dana)
+ * djvu: Ignore text regions that are missing text (Jason Crain)
+
+UI:
+ * Fix Dual odd-left state (#603, Nelson Benítez León)
+ * Fix regression, set to odd-left in dual mode when document has only 2 pages (#669, Nelson Benítez León)
+ * Fix cursor movement when logical and visual line differs (#889, Colomban Wendling)
+ * Fix zoom-action to respond touch events (#976, Jason Crain)
+
+UI translations:
+ * Daniel Mustieles (es)
+ * Dušan Kazik (sk)
+ * Jordi Mas (ca)
+ * Matej Urbančič (sl)
+ * Piotr Drąg (pl)
+ * Stas Solovey (ru)
+ * Tom Tryfonidis (el)
+ * Yuras Shumovich (be)
+ * خالد حسني (ar)
+
+Doc translations:
+ * Marek Cernocky (cs)
+
+================
 Evince    3.30.0
 ================
 
@@ -82,7 +117,6 @@ Bugfixes:
   * Remove zoom-in/out icons from menu (#947, Germán Poo-Caamaño)
   * Store priv->popup as a GtkPopover* (#881, Daniel Boles)
   * Use Popover.popup() to get animation (#881, Daniel Boles)
-  * Add enumeration for zoom_in/out buttons (Germán Poo-Caamaño)
   * Set right alignment for zoom percentage (#947, Germán Poo-Caamaño)
   * Separate Open and Save actions in their own menu groups (#947, Germán Poo-Caamaño)
   * Use a new icon for the outline in the side bar (#947, Germán Poo-Caamaño)
@@ -109,7 +143,6 @@ Bugfixes:
   * fix sensitiveness of remove bookmark button (#892, Nelson Benítez León)
   * Update addons for renamed .desktop (#962, Jeremy Bicha)
   * Use dual license for addons too (#775, #962, Jeremy Bicha)
-  * Use mailing list address as a contact (Germán Poo-Caamaño)
   * Use provides to link to previous ID (#962, Jeremy Bicha)
   * Add dependency on OpenJPEG (#939, Jason Crain)
   * Add snap packaging (#790393, #856, Ken VanDine)
