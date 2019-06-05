@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.32.0
-Release  : 28
+Release  : 29
 URL      : https://download.gnome.org/sources/evince/3.32/evince-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.32/evince-3.32.0.tar.xz
 Summary  : GNOME document viewer backend library
@@ -54,6 +54,7 @@ BuildRequires : pkgconfig(poppler-glib)
 BuildRequires : sed
 BuildRequires : tiff-dev
 Patch1: CVE-2019-11461.patch
+Patch2: CVE-2019-11459.nopatch
 
 %description
 # ![evince-logo] Evince
@@ -165,12 +166,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555971706
-export LDFLAGS="${LDFLAGS} -fno-lto"
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export SOURCE_DATE_EPOCH=1559777826
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -182,7 +183,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1555971706
+export SOURCE_DATE_EPOCH=1559777826
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evince
 cp COPYING %{buildroot}/usr/share/package-licenses/evince/COPYING
