@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.34.2
-Release  : 33
+Release  : 34
 URL      : https://download.gnome.org/sources/evince/3.34/evince-3.34.2.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.34/evince-3.34.2.tar.xz
 Summary  : GNOME document viewer backend library
@@ -165,7 +165,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1574699336
+export SOURCE_DATE_EPOCH=1576599286
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -182,7 +182,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1574699336
+export SOURCE_DATE_EPOCH=1576599286
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evince
 cp %{_builddir}/evince-3.34.2/COPYING %{buildroot}/usr/share/package-licenses/evince/e3afbcad74dd08819b5de5ad0338203369731f67
