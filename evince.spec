@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.34.2
-Release  : 34
+Release  : 35
 URL      : https://download.gnome.org/sources/evince/3.34/evince-3.34.2.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.34/evince-3.34.2.tar.xz
 Summary  : GNOME document viewer backend library
@@ -165,13 +165,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576599286
+export SOURCE_DATE_EPOCH=1583947937
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
-%configure --disable-static
+%configure --disable-static --enable-ps
 make  %{?_smp_mflags}
 
 %check
@@ -182,7 +182,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1576599286
+export SOURCE_DATE_EPOCH=1583947937
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evince
 cp %{_builddir}/evince-3.34.2/COPYING %{buildroot}/usr/share/package-licenses/evince/e3afbcad74dd08819b5de5ad0338203369731f67
@@ -230,6 +230,7 @@ cp %{_builddir}/evince-3.34.2/help/zh_TW/license.page %{buildroot}/usr/share/pac
 %defattr(-,root,root,-)
 /usr/lib64/evince/4/backends/comicsdocument.evince-backend
 /usr/lib64/evince/4/backends/pdfdocument.evince-backend
+/usr/lib64/evince/4/backends/psdocument.evince-backend
 /usr/lib64/evince/4/backends/tiffdocument.evince-backend
 
 %files bin
@@ -294,6 +295,7 @@ cp %{_builddir}/evince-3.34.2/help/zh_TW/license.page %{buildroot}/usr/share/pac
 /usr/share/icons/hicolor/symbolic/apps/org.gnome.Evince-symbolic.svg
 /usr/share/metainfo/evince-comicsdocument.metainfo.xml
 /usr/share/metainfo/evince-pdfdocument.metainfo.xml
+/usr/share/metainfo/evince-psdocument.metainfo.xml
 /usr/share/metainfo/evince-tiffdocument.metainfo.xml
 /usr/share/metainfo/org.gnome.Evince.appdata.xml
 /usr/share/thumbnailers/evince.thumbnailer
@@ -3173,6 +3175,7 @@ cp %{_builddir}/evince-3.34.2/help/zh_TW/license.page %{buildroot}/usr/share/pac
 %defattr(-,root,root,-)
 /usr/lib64/evince/4/backends/libcomicsdocument.so
 /usr/lib64/evince/4/backends/libpdfdocument.so
+/usr/lib64/evince/4/backends/libpsdocument.so
 /usr/lib64/evince/4/backends/libtiffdocument.so
 /usr/lib64/libevdocument3.so.4
 /usr/lib64/libevdocument3.so.4.0.0
