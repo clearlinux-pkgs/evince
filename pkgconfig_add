@@ -1,2 +1,26 @@
 # This file contains additional pkgconfig build requirements that did
 # not get picked up automatically. One name per line, no whitespace.
+adwaita-icon-theme
+cairo
+cairo-pdf
+cairo-ps
+gdk-pixbuf-2.0
+gio-2.0
+gio-unix-2.0
+gmodule-2.0
+gmodule-no-export-2.0
+gnome-desktop-3.0
+gsettings-desktop-schemas
+gspell-1
+gstreamer-1.0
+gstreamer-base-1.0
+gstreamer-video-1.0
+gthread-2.0
+gtk+-3.0
+gtk+-unix-print-3.0
+libarchive
+libnautilus-extension
+libsecret-1
+libspectre
+libxml-2.0
+poppler-glib
