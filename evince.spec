@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.38.0
-Release  : 38
+Release  : 39
 URL      : https://download.gnome.org/sources/evince/3.38/evince-3.38.0.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.38/evince-3.38.0.tar.xz
 Summary  : No detailed summary available
