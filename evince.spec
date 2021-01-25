@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 3.38.1
-Release  : 40
+Release  : 41
 URL      : https://download.gnome.org/sources/evince/3.38/evince-3.38.1.tar.xz
 Source0  : https://download.gnome.org/sources/evince/3.38/evince-3.38.1.tar.xz
 Summary  : No detailed summary available
