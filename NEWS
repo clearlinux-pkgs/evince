@@ -1,44 +1,165 @@
+==============
+Evince    40.0
+==============
+
+comics:
+  *  Add support for RAR v5 archives through libarchive (#1190, Bastien Nocera)
+
+help:
+  * Add new icon under figures to meson.build (Andre Klapper)
+  * Side pane view switcher moved from top to bottom (#1566, Andre Klapper)
+  * System printer settings UI has no Device section anymore (#1568, Andre Klapper)
+  * Update different behaviors how to open a file (Andre Klapper)
+  * Update help figure for German translation (Tim Sabsch)
+  * Use same phrase across all pages how to open the side pane (Andre Klapper)
+  * Remove Keyboard Shortcuts page (Sabri Ünal)
+  * Updated French help translations (Claude Paroz)
+
+unarr:
+  * Add error reporting to open function (Bastien Nocera)
+
+shell:
+  *  Add two new shortcuts (Sabri Ünal)
+  * Set page cache size with correct type (Marek Kasik)
+
+
+Developers:
+  * Andre Klapper, Bastien Nocera, Claude Paroz, Marek Kasik, Sabri Ünal, Tim Sabsch
+
+Translations:
+  * Asier Sarasua Garmendia (Basque)
+  * Rafael Fontenelle (Brazilian Portuguese)
+  * Zander Brown (British English)
+  * Jordi Mas (Catalan)
+  * Marek Černocký (Czech)
+  * Ask Hjorth Larsen (Danish)
+  * Hannie Dumoleyn (Dutch)
+  * Jiri Grönroos (Finnish)
+  * Charles Monzat (French)
+  * Fabio Tomat (Friulian)
+  * Fran Dieguez (Galician)
+  * Mario Blättermann (German)
+  * Balázs Úr (Hungarian)
+  * Gianvito Cavasoli (Italian)
+  * Baurzhan Muftakhidinov (Kazakh)
+  * Changwoo Ryu (Korean)
+  * Seong-ho Cho (Korean)
+  * Aurimas Černius (Lithuanian)
+  * Kjartan Maraas (Norwegian Bokmål)
+  * Danial Behzadi (Persian)
+  * Piotr Drąg (Polish)
+  * Мирослав Николић (Serbian)
+  * Dušan Kazik (Slovak)
+  * Anders Jonsson (Swedish)
+  * Yuri Chornoivan (Ukrainian)
+  * Ngọc Quân Trần (Vietnamese)
+
+
 ================
-Evince    3.38.2
+Evince    3.39.2
 ================
 
 libdocument:
-  * Fix parameter type in gtk-doc (Mike Vastola)
-  * Stop trusting phsyical dimensions from monitors (#1403, #3115, Mike Vastola)
+  *  Fix parameter type in gtk-doc (Mike Vastola)
+  *  Fix return value (Germán Poo-Caamaño)
+  *  Stop trusting phsyical dimensions from monitors (#1403, #3115, Mike Vastola)
 
 libview:
-  * Fix support for HiDPI in link preview (#1543, Mads Chr. Olesen)
-  * Forgo setting device offset on page surfaces (Andrew Mayorov)
+  *  Fix support for HiDPI in link preview (#1543, Mads Chr. Olesen)
+  *  Rorgo setting device offset on page surfaces (Andrew Mayorov)
 
-pdf:
-  * keep same visual appearance between displayed and copied text (#1085, Nelson Benítez León)
-
-Developers:
-  * Andrew Mayorov, Mads Chr. Olesen, Mike Vastola, Nelson Benítez León
-
-================
-Evince    3.38.1
-================
+* pdf: keep same visual appearance between displayed and copied text (#1085, Nelson Benítez León)
 
 shell:
-  *  Make Esc cancel any annotation in progress (#1416, Casey Jao)
-  * Remove ability to launch actions (#1333, Michael Catanzaro)
-  * Unescape tooltip URI in Recent Documents view (Santurysim)
-  * Fix X11 regression (#1504, Nelson Benítez León)
-  * Text search if match not in page keep looking for others (#1545, Nelson Benítez León)
+  * Use HdyApplicationWindow (Christopher Davis)
+  * Use theme bg color for content view (Christopher Davis)
+  * switch thumbnails's sidebar to two colums layout when using dual page (#1541, Nelson Benítez León)
+  * Adjust reorder index for message area (Christopher Davis)
+  * Don't show close button on searchbar (Christopher Davis)
+  * Remove fullscreen overlay (#1442, #336, Christopher Davis)
+  * hide close button when fullscreened (Christopher Davis)
 
 Developers:
-  * Casey Jao, Michael Catanzaro, Nelson Benítez León, Santurysim
+  * Andrew Mayorov, Christopher Davis, Germán Poo-Caamaño, Mads Chr. Olesen, Mike Vastola, Nelson Benítez León
 
 Translations:
+  * Marek Černocký (Czech)
+  * Fran Dieguez (Galician)
+  * Balázs Meskó (Hungarian)
+  * Kukuh Syafaat (Indonesian)
+  * Hugo Carvalho (Portuguese)
+  * A S Alam (Punjabi)
+  * Matej Urbančič (Slovenian)
+  * Daniel Mustieles (Spanish)
+  * Anders Jonsson (Swedish)
+  * Emin Tufan Çetin (Turkish)
+
+================
+Evince    3.39.1
+================
+
+build:
+  * Build using libm in some of the backends (Sebastien Bacher)
+  * Check poppler version when resetting form (#46, Marek Kasik)
+  * Make the build reproducible (Chris Lamb)
+  * Remove compulsory_for_desktop (#445, Michael Catanzaro)
+  * Updated bug list url (Cyrille Médard de Chardon)
+  * Fix compilation, CLOEXEC does not exist (Vincent Torri)
+  * Fix compilation on windows: open() needs io.h (Vincent Torri)
+  * Build in windows needs shlwapi (Vincent Torri)
+
+help:
+  * Make order of keys consistent. (scootergrisen)
+  * Sync help against menu (scootergrisen)
+  * Sync help against the text in the print dialog (scootergrisen)
+
+shell:
+  * Make Esc cancel any annotation in progress (#1416, Casey Jao)
+  * Make F10 toggle the main menu (#1328, herypt)
+  * Mark the document title when modified (Casey Jao)
+  * Remove style for gtk < 3.18 (Germán Poo-Caamaño)
+  * Track document modified status (Casey Jao)
+  * Check for file changes when reopening a PDF (#339, Antonio Eletto)
+  * Handle reset form action (#46, Marek Kasik)
+  * Remove ability to launch actions (#1333, Michael Catanzaro)
+  * Remove trailing spaces (scootergrisen)
+  * Add new field "contains_js" (Nelson Benítez León)
+  * Unescape tooltip URI in Recent Documents view (Santurysim)
+  * Fix X11 regression (#1504, Nelson Benítez León)
+  * Add print setting to draw borders (#221, Jonas Danielsson)
+  * Fix text search if match not in page keep looking for others (#1545, Nelson Benítez León)
+
+Developers:
+  * Antonio Eletto, Casey Jao, Chris Lamb, Cyrille Médard de Chardon, Germán Poo-Caamaño, Jonas Danielsson, Marek Kasik, Michael Catanzaro, Nelson Benítez León, Santurysim, Sebastien Bacher, Vincent Torri, herypt, scootergrisen
+
+Translations:
+  * Gil Forcada (Catalan)
   * Jordi Mas (Catalan)
+  * Boyuan Yang (Chinese (China))
+  * Marek Černocký (Czech)
+  * Jiri Grönroos (Finnish)
+  * Fabio Tomat (Friulian)
+  * Fran Dieguez (Galician)
   * Christian Kirbach (German)
+  * Philipp Kiemle (German)
   * Yosef Or Boczko (Hebrew)
+  * Balázs Úr (Hungarian)
+  * Kukuh Syafaat (Indonesian)
   * Gianvito Cavasoli (Italian)
+  * sicklylife (Japanese)
+  * Changwoo Ryu (Korean)
   * Kjartan Maraas (Norwegian Bokmål)
-  * Juliano de Souza Camargo (Portuguese)
+  * Hugo Carvalho (Portuguese)
+  * Juliano Camargo (Portuguese)
+  * Florentina Mușat (Romanian)
   * Dušan Kazik (Slovak)
+  * Matej Urbančič (Slovenian)
+  * Daniel Mustieles (Spanish)
+  * Anders Jonsson (Swedish)
+  * Emin Tufan Çetin (Turkish)
+  * Yuri Chornoivan (Ukrainian)
   * Ngọc Quân Trần (Vietnamese)
+
 
 ================
 Evince    3.38.0
