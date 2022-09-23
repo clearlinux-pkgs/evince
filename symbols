@@ -110,6 +110,7 @@ libevdocument3.so.4:ev_document_fc_mutex_lock
 libevdocument3.so.4:ev_document_fc_mutex_trylock
 libevdocument3.so.4:ev_document_fc_mutex_unlock
 libevdocument3.so.4:ev_document_find_find_text
+libevdocument3.so.4:ev_document_find_find_text_extended
 libevdocument3.so.4:ev_document_find_find_text_with_options
 libevdocument3.so.4:ev_document_find_get_supported_options
 libevdocument3.so.4:ev_document_find_get_type
@@ -254,6 +255,10 @@ libevdocument3.so.4:ev_file_get_mime_type_from_fd
 libevdocument3.so.4:ev_file_is_temp
 libevdocument3.so.4:ev_file_uncompress
 libevdocument3.so.4:ev_find_options_get_type
+libevdocument3.so.4:ev_find_rectangle_copy
+libevdocument3.so.4:ev_find_rectangle_free
+libevdocument3.so.4:ev_find_rectangle_get_type
+libevdocument3.so.4:ev_find_rectangle_new
 libevdocument3.so.4:ev_form_field_button_get_type
 libevdocument3.so.4:ev_form_field_button_new
 libevdocument3.so.4:ev_form_field_button_type_get_type
@@ -516,6 +521,7 @@ libevview3.so.3:ev_job_export_new
 libevview3.so.3:ev_job_export_set_page
 libevview3.so.3:ev_job_failed
 libevview3.so.3:ev_job_failed_from_error
+libevview3.so.3:ev_job_find_get_n_main_results
 libevview3.so.3:ev_job_find_get_n_results
 libevview3.so.3:ev_job_find_get_options
 libevview3.so.3:ev_job_find_get_progress
@@ -576,6 +582,7 @@ libevview3.so.3:ev_job_save_new
 libevview3.so.3:ev_job_scheduler_get_running_thread_job
 libevview3.so.3:ev_job_scheduler_push_job
 libevview3.so.3:ev_job_scheduler_update_job
+libevview3.so.3:ev_job_scheduler_wait
 libevview3.so.3:ev_job_set_run_mode
 libevview3.so.3:ev_job_succeeded
 libevview3.so.3:ev_job_thumbnail_format_get_type
