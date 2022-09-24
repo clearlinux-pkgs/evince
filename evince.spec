@@ -4,7 +4,7 @@
 #
 Name     : evince
 Version  : 43.0
-Release  : 61
+Release  : 62
 URL      : https://download.gnome.org/sources/evince/43/evince-43.0.tar.xz
 Source0  : https://download.gnome.org/sources/evince/43/evince-43.0.tar.xz
 Summary  : No detailed summary available
@@ -50,7 +50,6 @@ BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(gtk+-unix-print-3.0)
 BuildRequires : pkgconfig(libarchive)
 BuildRequires : pkgconfig(libhandy-1)
-BuildRequires : pkgconfig(libnautilus-extension)
 BuildRequires : pkgconfig(libsecret-1)
 BuildRequires : pkgconfig(libspectre)
 BuildRequires : pkgconfig(libxml-2.0)
@@ -168,13 +167,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663949341
+export SOURCE_DATE_EPOCH=1664029084
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export FFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dps=enabled  builddir
+CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dps=enabled \
+-Dnautilus=false  builddir
 ninja -v -C builddir
 
 %install
@@ -3857,7 +3857,6 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/lib64/libevdocument3.so.4.0.0
 /usr/lib64/libevview3.so.3
 /usr/lib64/libevview3.so.3.0.0
-/usr/lib64/nautilus/extensions-3.0/libevince-properties-page.so
 
 %files libexec
 %defattr(-,root,root,-)
