@@ -5,7 +5,7 @@
 #
 Name     : evince
 Version  : 44.1
-Release  : 75
+Release  : 76
 URL      : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
 Source0  : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
 Summary  : No detailed summary available
