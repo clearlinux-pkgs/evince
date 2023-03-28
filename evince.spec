@@ -5,7 +5,7 @@
 #
 Name     : evince
 Version  : 44.1
-Release  : 74
+Release  : 75
 URL      : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
 Source0  : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
 Summary  : No detailed summary available
@@ -171,7 +171,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679685210
+export SOURCE_DATE_EPOCH=1680021900
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
