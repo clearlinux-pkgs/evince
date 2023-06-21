@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : evince
-Version  : 44.1
-Release  : 79
-URL      : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
-Source0  : https://download.gnome.org/sources/evince/44/evince-44.1.tar.xz
+Version  : 44.2
+Release  : 80
+URL      : https://download.gnome.org/sources/evince/44/evince-44.2.tar.xz
+Source0  : https://download.gnome.org/sources/evince/44/evince-44.2.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0 GPL-2.0 MIT
@@ -164,10 +164,10 @@ services components for the evince package.
 
 
 %prep
-%setup -q -n evince-44.1
-cd %{_builddir}/evince-44.1
+%setup -q -n evince-44.2
+cd %{_builddir}/evince-44.2
 pushd ..
-cp -a evince-44.1 buildavx2
+cp -a evince-44.2 buildavx2
 popd
 
 %build
@@ -175,7 +175,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686934856
+export SOURCE_DATE_EPOCH=1687379415
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
