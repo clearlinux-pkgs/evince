@@ -4,13 +4,13 @@
 # Using build pattern: meson
 #
 Name     : evince
-Version  : 44.3
-Release  : 81
-URL      : https://download.gnome.org/sources/evince/44/evince-44.3.tar.xz
-Source0  : https://download.gnome.org/sources/evince/44/evince-44.3.tar.xz
+Version  : 45.0
+Release  : 82
+URL      : https://download.gnome.org/sources/evince/45/evince-45.0.tar.xz
+Source0  : https://download.gnome.org/sources/evince/45/evince-45.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : CC-BY-SA-3.0 GPL-2.0 MIT
+License  : GPL-2.0 MIT
 Requires: evince-bin = %{version}-%{release}
 Requires: evince-data = %{version}-%{release}
 Requires: evince-lib = %{version}-%{release}
@@ -164,10 +164,10 @@ services components for the evince package.
 
 
 %prep
-%setup -q -n evince-44.3
-cd %{_builddir}/evince-44.3
+%setup -q -n evince-45.0
+cd %{_builddir}/evince-45.0
 pushd ..
-cp -a evince-44.3 buildavx2
+cp -a evince-45.0 buildavx2
 popd
 
 %build
@@ -175,7 +175,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1688407614
+export SOURCE_DATE_EPOCH=1695678260
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -195,7 +195,6 @@ ninja -v -C builddiravx2
 mkdir -p %{buildroot}/usr/share/package-licenses/evince
 cp %{_builddir}/evince-%{version}/COPYING %{buildroot}/usr/share/package-licenses/evince/e3afbcad74dd08819b5de5ad0338203369731f67 || :
 cp %{_builddir}/evince-%{version}/cut-n-paste/synctex/LICENSE %{buildroot}/usr/share/package-licenses/evince/024379152453bda1d28e9126d8685fa222c1174d || :
-cp %{_builddir}/evince-%{version}/help/C/license.page %{buildroot}/usr/share/package-licenses/evince/99449fd3e6417f1f32dbe2a5b252880badb25704 || :
 DESTDIR=%{buildroot}-v3 ninja -C builddiravx2 install
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang evince
@@ -221,11 +220,9 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %defattr(-,root,root,-)
 /usr/lib64/girepository-1.0/EvinceDocument-3.0.typelib
 /usr/lib64/girepository-1.0/EvinceView-3.0.typelib
-/usr/share/GConf/gsettings/evince.convert
 /usr/share/applications/org.gnome.Evince-previewer.desktop
 /usr/share/applications/org.gnome.Evince.desktop
 /usr/share/dbus-1/services/org.gnome.evince.Daemon.service
-/usr/share/evince/hand-open.png
 /usr/share/evince/icons/hicolor/16x16/actions/object-rotate-left.png
 /usr/share/evince/icons/hicolor/16x16/actions/object-rotate-right.png
 /usr/share/evince/icons/hicolor/16x16/actions/view-page-continuous.png
@@ -278,7 +275,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/metainfo/evince-pdfdocument.metainfo.xml
 /usr/share/metainfo/evince-psdocument.metainfo.xml
 /usr/share/metainfo/evince-tiffdocument.metainfo.xml
-/usr/share/metainfo/org.gnome.Evince.appdata.xml
+/usr/share/metainfo/org.gnome.Evince.metainfo.xml
 /usr/share/thumbnailers/evince.thumbnailer
 
 %files dev
@@ -1990,6 +1987,81 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/help/eu/evince/synctex.page
 /usr/share/help/eu/evince/textselection.page
 /usr/share/help/eu/evince/translate.page
+/usr/share/help/fa/evince/annotation-properties.page
+/usr/share/help/fa/evince/annotations-delete.page
+/usr/share/help/fa/evince/annotations-disabled.page
+/usr/share/help/fa/evince/annotations-navigate.page
+/usr/share/help/fa/evince/annotations-save.page
+/usr/share/help/fa/evince/annotations.page
+/usr/share/help/fa/evince/bookmarks.page
+/usr/share/help/fa/evince/bug-filing.page
+/usr/share/help/fa/evince/commandline.page
+/usr/share/help/fa/evince/convertPostScript.page
+/usr/share/help/fa/evince/convertSVG.page
+/usr/share/help/fa/evince/convertpdf.page
+/usr/share/help/fa/evince/default-settings.page
+/usr/share/help/fa/evince/develop.page
+/usr/share/help/fa/evince/documentation.page
+/usr/share/help/fa/evince/duplex-10pages.page
+/usr/share/help/fa/evince/duplex-11pages.page
+/usr/share/help/fa/evince/duplex-12pages.page
+/usr/share/help/fa/evince/duplex-13pages.page
+/usr/share/help/fa/evince/duplex-14pages.page
+/usr/share/help/fa/evince/duplex-15pages.page
+/usr/share/help/fa/evince/duplex-16pages.page
+/usr/share/help/fa/evince/duplex-3pages.page
+/usr/share/help/fa/evince/duplex-4pages.page
+/usr/share/help/fa/evince/duplex-5pages.page
+/usr/share/help/fa/evince/duplex-6pages.page
+/usr/share/help/fa/evince/duplex-7pages.page
+/usr/share/help/fa/evince/duplex-8pages.page
+/usr/share/help/fa/evince/duplex-9pages.page
+/usr/share/help/fa/evince/duplex-npages.page
+/usr/share/help/fa/evince/editing.page
+/usr/share/help/fa/evince/figures/add-text-annotation.png
+/usr/share/help/fa/evince/figures/annotations-nav-to-page.png
+/usr/share/help/fa/evince/figures/emblem-system-symbolic.svg
+/usr/share/help/fa/evince/figures/org.gnome.Evince.svg
+/usr/share/help/fa/evince/figures/zoom.png
+/usr/share/help/fa/evince/finding.page
+/usr/share/help/fa/evince/formats.page
+/usr/share/help/fa/evince/forms-saving.page
+/usr/share/help/fa/evince/forms.page
+/usr/share/help/fa/evince/headerbar.page
+/usr/share/help/fa/evince/index.page
+/usr/share/help/fa/evince/introduction.page
+/usr/share/help/fa/evince/invert-colors.page
+/usr/share/help/fa/evince/legal-unported.xml
+/usr/share/help/fa/evince/legal.xml
+/usr/share/help/fa/evince/license.page
+/usr/share/help/fa/evince/movingaround.page
+/usr/share/help/fa/evince/noprint.page
+/usr/share/help/fa/evince/openerror.page
+/usr/share/help/fa/evince/opening.page
+/usr/share/help/fa/evince/password.page
+/usr/share/help/fa/evince/presentations.page
+/usr/share/help/fa/evince/print-2sided.page
+/usr/share/help/fa/evince/print-booklet.page
+/usr/share/help/fa/evince/print-differentsize.page
+/usr/share/help/fa/evince/print-order.page
+/usr/share/help/fa/evince/print-pagescaling.page
+/usr/share/help/fa/evince/print-select.page
+/usr/share/help/fa/evince/printing.page
+/usr/share/help/fa/evince/reload.page
+/usr/share/help/fa/evince/singlesided-13-16pages.page
+/usr/share/help/fa/evince/singlesided-17-20pages.page
+/usr/share/help/fa/evince/singlesided-3-4pages.page
+/usr/share/help/fa/evince/singlesided-5-8pages.page
+/usr/share/help/fa/evince/singlesided-9-12pages.page
+/usr/share/help/fa/evince/singlesided-npages.page
+/usr/share/help/fa/evince/synctex-beamer.page
+/usr/share/help/fa/evince/synctex-compile.page
+/usr/share/help/fa/evince/synctex-editors.page
+/usr/share/help/fa/evince/synctex-search.page
+/usr/share/help/fa/evince/synctex-support.page
+/usr/share/help/fa/evince/synctex.page
+/usr/share/help/fa/evince/textselection.page
+/usr/share/help/fa/evince/translate.page
 /usr/share/help/fi/evince/annotation-properties.page
 /usr/share/help/fi/evince/annotations-delete.page
 /usr/share/help/fi/evince/annotations-disabled.page
@@ -3891,7 +3963,6 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/evince/024379152453bda1d28e9126d8685fa222c1174d
-/usr/share/package-licenses/evince/99449fd3e6417f1f32dbe2a5b252880badb25704
 /usr/share/package-licenses/evince/e3afbcad74dd08819b5de5ad0338203369731f67
 
 %files man
