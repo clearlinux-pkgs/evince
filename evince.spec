@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : evince
-Version  : 46.1
-Release  : 84
-URL      : https://download.gnome.org/sources/evince/46/evince-46.1.tar.xz
-Source0  : https://download.gnome.org/sources/evince/46/evince-46.1.tar.xz
+Version  : 46.3
+Release  : 85
+URL      : https://download.gnome.org/sources/evince/46/evince-46.3.tar.xz
+Source0  : https://download.gnome.org/sources/evince/46/evince-46.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 MIT
@@ -166,10 +166,10 @@ services components for the evince package.
 
 
 %prep
-%setup -q -n evince-46.1
-cd %{_builddir}/evince-46.1
+%setup -q -n evince-46.3
+cd %{_builddir}/evince-46.3
 pushd ..
-cp -a evince-46.1 buildavx2
+cp -a evince-46.3 buildavx2
 popd
 
 %build
@@ -177,7 +177,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1714401889
+export SOURCE_DATE_EPOCH=1716827957
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
