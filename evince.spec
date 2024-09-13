@@ -7,7 +7,7 @@
 #
 Name     : evince
 Version  : 46.3.1
-Release  : 88
+Release  : 89
 URL      : https://download.gnome.org/sources/evince/46/evince-46.3.1.tar.xz
 Source0  : https://download.gnome.org/sources/evince/46/evince-46.3.1.tar.xz
 Summary  : No detailed summary available
